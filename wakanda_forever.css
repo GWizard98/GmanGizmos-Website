@@ -1,0 +1,222 @@
+body {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000000;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+}
+
+#hero-video-section {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: #000000;
+}
+
+#hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    opacity: 0.5;
+}
+
+#hero-video-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.8) 100%);
+    pointer-events: none;
+}
+
+#hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: radial-gradient(ellipse at center, #1a1a1a 0%, #000000 70%)
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+#hero-content h1 {
+    font-size: 6rem;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, #ffffff 0%, #888888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 80px rgba(255, 255, 255, 0.3);
+}
+
+section[style*="height: 2000vh"] { 
+    display: none;
+}
+
+section:not(#hero)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+    pointer-events: none;
+}
+
+section:not(#hero)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    pointer-events: none;
+}
+
+section {
+    min-height: 100vh;
+    padding: 60px 20px;
+}
+
+#navigation-chat {
+    background-color: #0a0a0a;
+    padding: 50vh;
+}
+
+#chatbot {
+    text-align: center;
+    padding: 40px;
+}
+
+button,
+#chat-trigger,
+.watch,
+.ad-controls button {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+    color: #ffffff;
+    border: 1px solid #333;
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+button:hover,
+#chat-trigger:hover,
+.watch:hover,
+.ad-controls button:hover {
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    border-color: #555;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
+
+#find-gift h2 {
+    font-size: 4rem;
+    text-align:  center;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.quiz-mockup {
+    text-align: center;
+    padding: 40px;
+    color: #aaa;
+}
+
+#Library h2 {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.character-grid {
+    text-align: center;
+    color: #aaa;
+    padding: 40px;
+}
+
+#advertisement {
+    background-color: #000000;   
+}
+
+.ad-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.ad-content {
+    text-align: center;
+}
+
+.ad-content h3 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#inspiration {
+    background-color: #0a0a0a;
+}
+
+#inspiration h2 {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.character-quotes {
+    text-align: center;
+    padding: 40px;
+    color: #ffffff;
+    line-height: 1.8;
+}
