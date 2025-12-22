@@ -6,14 +6,13 @@
 ## Deliverables
 
 **Live Deployment**  
-https://obox-project-2ujp.vercel.app/
+[https://obox-project-2ujp.vercel.app/](https://obox-project-2ujp.vercel.app/)
 
 **Video Walkthrough**  
-https://drive.google.com/file/d/1jkSCdERl107Bf8A4m86BXZMk2mJIIl2J/view?usp=sharing
+[View Video on Google Drive](https://drive.google.com/file/d/1jkSCdERl107Bf8A4m86BXZMk2mJIIl2J/view?usp=sharing)
 
 **GitHub Repository**  
-https://github.com/GWizard98/OBOX-Project
-
+[https://github.com/GWizard98/OBOX-Project](https://github.com/GWizard98/OBOX-Project)
 ---
 
 ## Project Overview
