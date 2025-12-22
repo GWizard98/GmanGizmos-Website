@@ -120,13 +120,19 @@ section {
 }
 
 #navigation-chat {
-    background-color: #0a0a0a;
-    padding: 50vh;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000000;
 }
 
 #chatbot {
     text-align: center;
     padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
 }
 
 button,

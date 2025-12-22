@@ -13,7 +13,7 @@ gsap.to("#hero-video-section", {
     }
 });
 
-gasp.to("hero h1", {
+gsap.to("#hero h1", {
     opacity: 0,
     y: -100,
     scrollTrigger: {
