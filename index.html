@@ -78,10 +78,6 @@
         </div>
     </section>
     
-    <section id="navigation-chat">
-        <nav id="main-nav">
-
-        </nav>
         <div id="chatbox">
             <button id="chat-trigger">Chat Assistant</button>
             <div class="chat-window">
@@ -90,40 +86,86 @@
         </div>
     </section>
 
+    <section id="portfolio" style="min-height: 100vh; padding: 100px 50px; background: #000;">
+        <h2 style="color: white; text-align: center; font-size: 48px; margin-bottom: 60px;">Portfolio</h2>
 
-    <section id="find-gift" style="min-height: 100vh; border: 1px solid #333;">
-        <h2>Find the Gift</h2>
-        <div class="quiz-mackup">
-            
+        <div class="portfolio-grid">
+            <div class="project-card">
+                <h3>Scroll-Driven Interactive Website</h3>
+                <p>Cinematic web experience featuring GSAP scroll animations, video backgrounds, and smooth section transitions. Built for a frontend developer technical assessment.</p>
+                <p class="tech-stack">JavaScript • GSAP • ScrollTrigger • Vercel</p>
+                <a href="https://obox-project-2ujp.vercel.app/" target="_blank" class="project-link">View Live Demo →</a>
+            </div>
 
+            <div class="project-card">
+                <h3>Pediatric Therapy Documentation App</h3>
+                <p>Custom web application for Miami-based therapy center featuring digital signature capture, session logging, secure document storage, and PDF report generation.</p>
+                <p class="tech-stack">React • Firebase • HIPAA-Compliant</p>
+                <p class="project-status">In Development • Launching Q1 2026</p>
+            </div>
         </div>
     </section>
 
-    <section id="Library" style="min-height: 100vh; border: 1px solid #333;">
-        <h2>Library</h2>
-        <div class="character-grid">
-            
+    <section id="about" style="min-height: 100vh; padding: 100px 50px; background: #111; display: flex; align-items: center; justify-content: center;">
+        <div style="max-width: 900px; text-align: center;">
+            <h2 style="color: white; font-size: 48px; margin-bottom: 40px;">About GmanGizmos</h2>
+
+            <p style="color: rgba(255, 255, 2555, 0.8); font-size: 20px; line-height: 1.8; margin-bottom: 30px;">
+                I'm Cristion Gordon, a frontend developer and U.S Military veteran based in Miami, Florida. I specialize in creating responsive, high-performance websites and custom applitcations that help businesses greow online.</p>
+
+            <p style="color: rgba(255, 255, 255, 0.8); font-size: 20px; line-height: 1.8; margin-bottom: 30px;">
+                With expertise in modern JavaScript, React, GSAP animations, and cloud technologies, I deliver solution that are both beautiful and functional. Ever project receives the same attention to detail and commitment to excellence I learned during my military service.</p>
+
+            <div class="skills-container">
+                <span class="skill-badge">JavaScript</span>
+                <span class="skill-badge">React</span>
+                <span class="skill-badge">GSAP</span>
+                <span class="skill-badge">HTML/CSS</span>
+                <span class="skill-badge">Firebase</span>
+                <span class="skill-badge">Node.js</span>
+                <span class="skill-badge">Git</span>
+                <span class="skill-badge">Responsive Design</span>
+                <span class="skill-badge">Node.js</span>
+            </div>
         </div>
     </section>
-    <section id="advertisement" style="min-height: 100vh; border: 1px solid #333;">
-        <div class="ad-controls">
-            <button id="prev">Previous</button>
-            <button id="next">Next</button>
-        </div>
-        <div class="ad-content">
-            <h3>Advertisement</h3>
-            <button class="watch">Watch</button>
+
+    <section id="contact" style="min-height: 100vh; padding: 100px 50px; background: #000; display: flex; align-items: center; justify-content: center;">
+        <div style="max-width: 700px; width: 100%;">
+            <h2 style="color: white; text-align: center; font-size: 48px; margin-bottom: 20px;">Start Your Project Today</h2>
+            <p style="color: rgba(255, 255, 255, 0.7); text-align: center; font-size: 18px; margin-bottom: 50px;">Ready to bring your vision to life? Let's discuss your project and create something amazing.</p>
+
+            <form action="https://formspree.io/f/xzdpklev" method="POST" class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <select name="service" required>
+                    <option value="">Select Service type</option>
+                    <option value="landing">Landing Page ($300+)</option>
+                    <option value="website">Business Website ($800+)</option>
+                    <option value="webapp">Web Application ($1,000+)</option>
+                    <option value="app">App Development ($2,000+)</option>
+                    <option value="support">Support & Maintenance</option>
+                </select>
+                <select name="budget">
+                    <option value="">Select Budget Range</option>
+                    <option value="300-500">$300 - $500</option>
+                    <option value="500-1000">$500 - $1,000</option>
+                    <option value="1000-2000">$1,000 - $2,000</option>
+                    <option value="2000+">$2,000+</option>
+                </select>
+                <textarea name="message" placeholder="Tell me about your project..." rows="6" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </div>
     </section>
-    <section id="inspiration" style="min-height: 100vh; border: 1px solid #333">
-        <h2>Inspiration</h2>
-        <div class="chracter-quotes">
-            "This is a demonstration of scroll-driven animations and cinematic web experiences."
-        </div>
-        <div class="wisdom-guide">
-            
-        </div>
-    </section>
+
+<footer style="background: #000; padding: 40px 50px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+        <p style="color : rgba(255, 255, 255, 0.6); margin-bottom: 20px;">GmanGizmos Web Development | Miami, Florida</p>
+        <p style="color: rgba(255, 255, 255, 0.4); font-size: 14px;">© 2024 GmanGizmos | All Rights Reserved</p>
+        <p style="color: rgba(255, 255, 255, 0.3); font-size: 12px; margin-top: 10px">Built with JavaScript, GSAP, and ☕</=>
+    </div>
+</footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
