@@ -281,7 +281,7 @@ button:hover,
 }
 
 .service-card p {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(76, 175, 80, 0.8);
     line-height: 1.6;
     margin-bottom: 20px;
 }
@@ -293,7 +293,7 @@ button:hover,
 }
 
 .service-card li {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.9);
     padding: 10px 0;
     position: relative;
     padding-left: 25px;
