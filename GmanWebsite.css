@@ -409,6 +409,17 @@ button:hover,
     transition: border-color 0.3s ease, background 0.3s ease;
 }
 
+.contact-form select option {
+    background: #222;
+    color: white;
+    padding: 10px
+}
+
+.contact-form select:focus option {
+    background: #333;
+    color: white;
+}
+
 .contact-form input:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
