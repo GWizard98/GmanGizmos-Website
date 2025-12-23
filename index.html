@@ -130,20 +130,19 @@
             <form action="https://formspree.io/f/xzdpklev" method="POST" class="contact-form">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
-                <select name="service" required>
-                    <option value="">Select Service type</option>
-                    <option value="landing">Landing Page ($300+)</option>
-                    <option value="website">Business Website ($800+)</option>
-                    <option value="webapp">Web Application ($1,000+)</option>
-                    <option value="app">App Development ($2,000+)</option>
-                    <option value="support">Support & Maintenance</option>
+                <select name="service" required style="background: rgba(255,255,255,0.05); color: white;">
+                     <option value="" style="background: #222; color: white;">Select Service Type</option>
+                     <option value="landing" style="background: #222; color: white;">Landing Page ($300)</option>
+                     <option value="website" style="background: #222; color: white;">Business Website ($800)</option>
+                     <option value="webapp" style="background: #222; color: white;">Web Application ($1,000)</option>
+                     <option value="app" style="background: #222; color: white;">App Development ($2,000+)</option>
                 </select>
-                <select name="budget">
-                    <option value="">Select Budget Range</option>
-                    <option value="300-500">$300 - $500</option>
-                    <option value="500-1000">$500 - $1,000</option>
-                    <option value="1000-2000">$1,000 - $2,000</option>
-                    <option value="2000+">$2,000+</option>
+                <select name="budget" style="background: rgba(255,255,255,0.05); color: white;">
+                    <option value="" style="background: #222; color: white;">Budget Range</option>
+                    <option value="under500" style="background: #222; color: white;">Under $500</option>
+                    <option value="500-1500" style="background: #222; color: white;">$500 - $1,500</option>
+                    <option value="1500-3000" style="background: #222; color: white;">$1,500 - $3,000</option>
+                    <option value="3000plus" style="background: #222; color: white;">$3,000+</option>
                 </select>
                 <textarea name="message" placeholder="Tell me about your project..." rows="6" required></textarea>
                 <button type="submit">Send Message</button>
