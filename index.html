@@ -202,12 +202,9 @@
                     return data,id;
                 })
                 .catch(err => {
-                    console.error('Error creating oreder:', err);
-                    return data.id;
-                })
-                .catch(err => {
                     console.error('Error creating order:', err);
                     alert('Error creating order. Please try again.');
+                    throw err;
                 });
             },
 
