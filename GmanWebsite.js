@@ -50,4 +50,18 @@ gsap.utils.toArray('h2').forEach(heading => {
     });
 });
 
+gsap.utils.toArray(".project-card").forEach((card, index) => {
+    gsap.from(card, {
+        opacity: 0,
+        y: 40,
+        duration: 0.6,
+        delay: index * 0.1,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: card,
+            start: "top 85%"
+        }
+    });
+});
+
 console.log('Animations ready');
