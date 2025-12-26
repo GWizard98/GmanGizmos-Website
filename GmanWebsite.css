@@ -489,3 +489,15 @@ button:hover,
     background: #45a049;
     transform: translateY(-2px);
 }
+
+.phase-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+    padding: 0.2rem 0.45rem;
+    border-radius: 4px;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
