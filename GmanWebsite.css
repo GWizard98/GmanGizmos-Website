@@ -137,7 +137,7 @@ section[style*="height: 2000vh"] {
     display: none;
 }
 
-section:not(#hero)::before {
+section:not(#hero):not(hero-video-section)::before {
     content: '';
     position: absolute;
     top: 0;
@@ -148,7 +148,7 @@ section:not(#hero)::before {
     pointer-events: none;
 }
 
-section:not(#hero)::after {
+section:not(#hero):not(#hero-video-section)::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -159,7 +159,7 @@ section:not(#hero)::after {
     pointer-events: none;
 }
 
-section {
+section:not(hero-video-section) {
     min-height: 100vh;
     padding: 60px 20px;
 }
