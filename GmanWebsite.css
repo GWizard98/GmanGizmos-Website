@@ -7,7 +7,6 @@ body {
     to { opacity: 1; }
 }
 
-
 html {
     scroll-behavior: smooth;
 }
@@ -107,12 +106,12 @@ body {
 }
 
 #hero {
-    height: 100vh;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    background: radial-gradient(ellipse at center, #1a1a1a 0%, #000000 70%)
+    background: radial-gradient(ellipse at center, #1a1a1a 0%, #000000 70%);
 }
 
 .hero-content {
@@ -137,7 +136,7 @@ section[style*="height: 2000vh"] {
     display: none;
 }
 
-section:not(#hero):not(hero-video-section)::before {
+section:not(#hero):not(#hero-video-section)::before {
     content: '';
     position: absolute;
     top: 0;
@@ -159,11 +158,140 @@ section:not(#hero):not(#hero-video-section)::after {
     pointer-events: none;
 }
 
-section:not(hero-video-section) {
-    min-height: 100vh;
-    padding: 60px 20px;
+section:not(#hero-video-section) {
+    min-height: 50vh;
+    padding: 0px 20px;
 }
 
+/* Services Section */
+#services {
+    min-height: 100vh;
+    padding: 100px 50px;
+    background: #111;
+}
+
+/* Portfolio Section */
+#portfolio {
+    min-height: 100vh;
+    padding: 100px 50px;
+    background: #000;
+}
+
+/* About Section */
+#about {
+    min-height: 100vh;
+    padding: 100px 50px;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-content {
+    max-width: 900px;
+    text-align: center;
+}
+
+.about-text {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* Contact Section */
+#contact {
+    min-height: 100vh;
+    padding: 100px 50px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-wrapper {
+    max-width: 700px;
+    width: 100%;
+}
+
+.contact-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+/* Payment Section */
+#payment {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.payment-title {
+    color: white;
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.payment-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 30px;
+}
+
+.payment-select-wrapper {
+    margin: 30px 0;
+}
+
+.payment-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.payment-select {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: white;
+    font-family: inherit;
+}
+
+.payment-select option {
+    background: #222;
+    color: white;
+}
+
+.payment-note {
+    margin-top: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Section Titles */
+.section-title {
+    color: white;
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 60px;
+}
+
+#about .section-title {
+    margin-bottom: 40px;
+}
+
+#contact .section-title {
+    margin-bottom: 20px;
+}
+
+/* Navigation Chat */
 #navigation-chat {
     min-height: 100vh;
     display: flex;
@@ -300,7 +428,7 @@ button:hover,
 
 .service-grid {
     display: grid;
-    grid-template-columns: repaet(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     max-width: 1400px;
     margin: 0 auto;
@@ -361,10 +489,15 @@ button:hover,
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 40px;
-    max-width: 1200px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
     margin: 0 auto;
+}
+
+.portfolio-cta {
+    text-align: center;
+    margin-top: 60px;
 }
 
 .project-card {
@@ -423,81 +556,4 @@ button:hover,
     gap: 15px;
     justify-content: center;
     margin-top: 40px;
-}
-
-.skill-badge {
-    background: rgba(76, 175, 80, 0.2);
-    color: #4CAF50;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 16px;
-    font-weight: 500;
-    border: 1px solid rgba(76, 175, 80, 0.4);
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-    padding: 18px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    color: white;
-    font-size: 16px;
-    font-family: inherit;
-    transition: border-color 0.3s ease, background 0.3s ease;
-}
-
-.contact-form select option {
-    background: #222;
-    color: white;
-    padding: 10px
-}
-
-.contact-form select:focus option {
-    background: #333;
-    color: white;
-}
-
-.contact-form input:focus,
-.contact-form select:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: #4CAF50;
-    background: rgba(255, 255, 255, 0.08);
-}
-
-.contact-form button {
-    padding: 18px 40px;
-    background: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.contact-form button:hover {
-    background: #45a049;
-    transform: translateY(-2px);
-}
-
-.phase-badge {
-    font-size: 0.7rem;
-    font-weight: 600;
-    margin-left: 0.5rem;
-    padding: 0.2rem 0.45rem;
-    border-radius: 4px;
-    background-color: #1f1f1f;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
 }

@@ -26,8 +26,8 @@
         </div>
     </section>
 
-    <section id="services" style="min-height: 100vh; padding: 100px 50px; background: #111;">
-        <h2 style="color: white; text-align: center; font-size: 48px; margin-bottom: 60px;">Services</h2>
+    <section id="services">
+        <h2 class="section-title">Services</h2>
 
         <div class="service-grid">
             <div class="service-card">
@@ -83,15 +83,15 @@
         </div>
     </section>
 
-    <section id="portfolio" style="min-height: 100vh; padding: 100px 50px; background: #000;">
-        <h2 style="color: white; text-align: center; font-size: 48px; margin-bottom: 60px;">Portfolio</h2>
+    <section id="portfolio">
+        <h2 class="section-title">Portfolio</h2>
 
         <div class="portfolio-grid">
             <div class="project-card">
                 <h3>Scroll-Driven Interactive Website</h3>
                 <p>Cinematic web experience featuring GSAP scroll animations, video backgrounds, and smooth section transitions. Built for a frontend developer technical assessment.</p>
                 <p class="tech-stack">JavaScript • GSAP • ScrollTrigger • Vercel</p>
-                <a href="https://obox-project-2ujp.vercel.app/" target="_blank" class="project-link">View Live Demo →</a>
+                <a href="https://obox-project-2ujp.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">View Live Demo →</a>
             </div>
 
             <div class="project-card">
@@ -103,17 +103,9 @@
 
             <div class="project-card">
                 <h3>Nimbus Foundation Blueprint <span>(Phase 1)</span></h3>
-                <p>
-                    Backend foundation demonstrating FastAPI service design, Docker containerization, and professional Git workflows.
-                </p>
-                <p><strong>Tech:</strong> Python, FastAPI, Docker
-                </p>
-                <a
-                    href="https://github.com/GWizard98/Nimbus_foundation_Blueprint"
-                    target="_blank"
-                    rel="noopener noreferrer" >
-                    View on GitHub
-                </a>
+                <p>Backend foundation demonstrating FastAPI service design, Docker containerization, and professional Git workflows.</p>
+                <p class="tech-stack">Python • FastAPI • Docker</p>
+                <a href="https://github.com/GWizard98/Nimbus_foundation_Blueprint" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub →</a>
             </div>
 
             <div class="project-card">
@@ -121,21 +113,22 @@
                 <p>Full-service auto repair booking platform for Miami-based mechanic shop. Features online appointment scheduling, service catalog with pricing, contact forms, and direct call integration for customer convenience.</p>
                 <p class="tech-stack">HTML • CSS • JavaScript • Responsive Design • Vercel</p>
                 <p class="project-status">Live</p>
-                <a href="https://call-regi-website.vercel.app/" target="_blank" class="project-link">View Live Site →</a>
+                <a href="https://call-regi-website.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">View Live Site →</a>
              </div>
-
         </div>
+
+        <div class="portfolio-cta">
+             <a href="portfolio.html" class="cta-button">View Full Portfolio →</a>
+         </div>
     </section>
 
-    <section id="about" style="min-height: 100vh; padding: 100px 50px; background: #111; display: flex; align-items: center; justify-content: center;">
-        <div style="max-width: 900px; text-align: center;">
-            <h2 style="color: white; font-size: 48px; margin-bottom: 40px;">About GmanGizmos</h2>
+    <section id="about">
+        <div class="about-content">
+            <h2 class="section-title">About GmanGizmos</h2>
 
-            <p style="color: rgba(255, 255, 2555, 0.8); font-size: 20px; line-height: 1.8; margin-bottom: 30px;">
-                I'm Cristion Gordon, a frontend developer and U.S Military veteran based in Miami, Florida. I specialize in creating responsive, high-performance websites and custom applications that help businesses grow online.</p>
+            <p class="about-text">I'm Cristion Gordon, a frontend developer and U.S Military veteran based in Miami, Florida. I specialize in creating responsive, high-performance websites and custom applications that help businesses grow online.</p>
 
-            <p style="color: rgba(255, 255, 255, 0.8); font-size: 20px; line-height: 1.8; margin-bottom: 30px;">
-                With expertise in modern JavaScript, React, GSAP animations, and cloud technologies, I deliver solutions that are both beautiful and functional. Every project receives the same attention to detail and commitment to excellence I learned during my military service.</p>
+            <p class="about-text">With expertise in modern JavaScript, React, GSAP animations, and cloud technologies, I deliver solutions that are both beautiful and functional. Every project receives the same attention to detail and commitment to excellence I learned during my military service.</p>
 
             <div class="skills-container">
                 <span class="skill-badge">JavaScript</span>
@@ -150,27 +143,27 @@
         </div>
     </section>
 
-    <section id="contact" style="min-height: 100vh; padding: 100px 50px; background: #000; display: flex; align-items: center; justify-content: center;">
-        <div style="max-width: 700px; width: 100%;">
-            <h2 style="color: white; text-align: center; font-size: 48px; margin-bottom: 20px;">Start Your Project Today</h2>
-            <p style="color: rgba(255, 255, 255, 0.7); text-align: center; font-size: 18px; margin-bottom: 50px;">Ready to bring your vision to life? Let's discuss your project and create something amazing.</p>
+    <section id="contact">
+        <div class="contact-wrapper">
+            <h2 class="section-title">Start Your Project Today</h2>
+            <p class="contact-subtitle">Ready to bring your vision to life? Let's discuss your project and create something amazing.</p>
 
             <form action="https://formspree.io/f/xzdpklev" method="POST" class="contact-form">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
-                <select name="service" required style="background: rgba(255,255,255,0.05); color: white;">
-                     <option value="" style="background: #222; color: white;">Select Service Type</option>
-                     <option value="landing" style="background: #222; color: white;">Landing Page ($300)</option>
-                     <option value="website" style="background: #222; color: white;">Business Website ($800)</option>
-                     <option value="webapp" style="background: #222; color: white;">Web Application ($1,000)</option>
-                     <option value="app" style="background: #222; color: white;">App Development ($2,000+)</option>
+                <select name="service" required class="contact-select">
+                     <option value="">Select Service Type</option>
+                     <option value="landing">Landing Page ($300)</option>
+                     <option value="website">Business Website ($800)</option>
+                     <option value="webapp">Web Application ($1,000)</option>
+                     <option value="app">App Development ($2,000+)</option>
                 </select>
-                <select name="budget" style="background: rgba(255,255,255,0.05); color: white;">
-                    <option value="" style="background: #222; color: white;">Budget Range</option>
-                    <option value="under500" style="background: #222; color: white;">Under $500</option>
-                    <option value="500-1500" style="background: #222; color: white;">$500 - $1,500</option>
-                    <option value="1500-3000" style="background: #222; color: white;">$1,500 - $3,000</option>
-                    <option value="3000plus" style="background: #222; color: white;">$3,000+</option>
+                <select name="budget" class="contact-select">
+                    <option value="">Budget Range</option>
+                    <option value="under500">Under $500</option>
+                    <option value="500-1500">$500 - $1,500</option>
+                    <option value="1500-3000">$1,500 - $3,000</option>
+                    <option value="3000plus">$3,000+</option>
                 </select>
                 <textarea name="message" placeholder="Tell me about your project..." rows="6" required></textarea>
                 <button type="submit">Send Message</button>
@@ -178,13 +171,13 @@
         </div>
     </section>
 
-    <section id="payment" style="padding: 60px 20px; max-width: 800px; margin: 0 auto; text-align: center;">
-        <h2>Pay for Your Project</h2>
-        <p>Secure payment powered by PayPal</p>
+    <section id="payment">
+        <h2 class="payment-title">Pay for Your Project</h2>
+        <p class="payment-subtitle">Secure payment powered by PayPal</p>
 
-        <div style="margin: 30px 0;">
-            <label for="service-select" style="display: block; margin-bottom: 10px; font-weight: bold;">Select Service:</label>
-            <select id="service-select"style="padding: 10px font-size: 16px; width; 300px; max-width: 100%;">
+        <div class="payment-select-wrapper">
+            <label for="service-select" class="payment-label">Select Service:</label>
+            <select id="service-select" class="payment-select">
                 <option value="300">Landing Page - $300</option>
                 <option value="800">Business Website - $800</option>
                 <option value="1000">Web Application - $1,000</option>
@@ -196,9 +189,7 @@
 
         <div id="paypal-button-container"></div>
 
-        <p stye="margin-top: 20px; color: #666; font-size: 14px;">
-            Payments are processed securely through Paypal. You don't need a PayPal account to pay.
-        </p>
+        <p class="payment-note">Payments are processed securely through PayPal. You don't need a PayPal account to pay.</p>
     </section>
 
     <script src="https://www.paypal.com/sdk/js?client-id=ATlGQU4HB-rShuy-Jx6nCHBEIFePozs9jKKtWeZ9zTbtYhZSh4VXl9ksul75gsRKGvzJPglrbqemptMf&currency=USD"></script>
@@ -264,16 +255,16 @@
         }).render('#paypal-button-container');
     </script>
 
-<footer style="background: #000; padding: 40px 50px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
-    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
-        <p style="color : rgba(255, 255, 255, 0.6); margin-bottom: 20px;">GmanGizmos Web Development | Miami, Florida</p>
-        <p style="color: rgba(255,255,255,0.5); margin-bottom: 20px;">
-            <a href="mailto:gordoncristion@gmail.com" style="color: #4CAF50; text-decoration: none;">Email</a> |
-            <a href="https://www.linkedin.com/in/cristion-gordon-53a111262" target="_blank" style="color: #4CAF50; text-decoration: none;">LinkedIn</a> |
-            <a href="https://github.com/GWizard98" target="_blank" style="color : #4CAF50; text-decoration: none;">GitHub</a>
+<footer>
+    <div class="footer-content">
+        <p class="footer-company">GmanGizmos Web Development | Miami, Florida</p>
+        <p class="footer-links">
+            <a href="mailto:gordoncristion@gmail.com">Email</a> |
+            <a href="https://www.linkedin.com/in/cristion-gordon-53a111262" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+            <a href="https://github.com/GWizard98" target="_blank" rel="noopener noreferrer">GitHub</a>
         </p>
-        <p style="color: rgba(255, 255, 255, 0.4); font-size: 14px;">© 2025 GmanGizmos | All Rights Reserved</p>
-        <p style="color: rgba(255, 255, 255, 0.3); font-size: 12px; margin-top: 10px">Built with JavaScript, GSAP, and ☕
+        <p class="footer-copyright">© 2025 GmanGizmos | All Rights Reserved</p>
+        <p class="footer-credits">Built with JavaScript, GSAP, and ☕</p>
     </div>
 </footer>
 
