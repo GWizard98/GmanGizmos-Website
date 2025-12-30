@@ -115,11 +115,7 @@
                 <p class="project-status">Live</p>
                 <a href="https://call-regi-website.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">View Live Site →</a>
              </div>
-        </div>
-
-        <div class="portfolio-cta">
-             <a href="portfolio.html" class="cta-button">View Full Portfolio →</a>
-         </div>
+        </div>    
     </section>
 
     <section id="about">
@@ -151,14 +147,14 @@
             <form action="https://formspree.io/f/xzdpklev" method="POST" class="contact-form">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
-                <select name="service" required class="contact-select">
+                <select name="service" required class="contact-select" aria-label="Select service type">
                      <option value="">Select Service Type</option>
                      <option value="landing">Landing Page ($300)</option>
                      <option value="website">Business Website ($800)</option>
                      <option value="webapp">Web Application ($1,000)</option>
                      <option value="app">App Development ($2,000+)</option>
                 </select>
-                <select name="budget" class="contact-select">
+                <select name="budget" class="contact-select" aria-label="Select budget range">
                     <option value="">Budget Range</option>
                     <option value="under500">Under $500</option>
                     <option value="500-1500">$500 - $1,500</option>
