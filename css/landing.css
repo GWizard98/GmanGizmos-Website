@@ -1,0 +1,293 @@
+/* GmanGizmos Landing Page Styles */
+
+/* ==================== HERO SECTION ==================== */
+.hero {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 50px 80px;
+}
+
+.hero-content {
+    max-width: 900px;
+    text-align: center;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 25px;
+    background: rgba(0, 212, 255, 0.1);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 50px;
+    color: var(--primary-cyan);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    animation: fadeIn 0.6s ease-out;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 900;
+    margin-bottom: 30px;
+    line-height: 1.1;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.highlight {
+    background: linear-gradient(135deg, var(--primary-cyan), var(--accent-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--text-gray);
+    margin-bottom: 50px;
+    line-height: 1.8;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 60px;
+    animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+.hero-stats .stat {
+    text-align: center;
+}
+
+.hero-stats .stat h3 {
+    font-size: 2.5rem;
+    color: var(--primary-cyan);
+    margin-bottom: 10px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.hero-stats .stat p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+}
+
+/* ==================== PAGE NAVIGATION SECTION ==================== */
+.page-nav-section {
+    position: relative;
+    z-index: 1;
+    padding: 100px 50px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: 60px;
+    background: linear-gradient(135deg, var(--primary-cyan), var(--text-white));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.page-nav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-nav-card {
+    position: relative;
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.1), rgba(0, 212, 255, 0.05));
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    text-decoration: none;
+    color: var(--text-white);
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.page-nav-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), transparent);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.page-nav-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-cyan);
+    box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
+}
+
+.page-nav-card:hover::before {
+    opacity: 1;
+}
+
+.page-nav-card.featured {
+    border: 2px solid var(--primary-cyan);
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(0, 255, 136, 0.05));
+}
+
+.card-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-cyan));
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 25px;
+    transition: var(--transition);
+}
+
+.page-nav-card:hover .card-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.4);
+}
+
+.page-nav-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--text-white);
+}
+
+.page-nav-card p {
+    color: var(--text-gray);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.card-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 212, 255, 0.1);
+    border-radius: 50%;
+    color: var(--primary-cyan);
+    transition: var(--transition);
+}
+
+.page-nav-card:hover .card-arrow {
+    background: var(--primary-cyan);
+    color: var(--bg-dark);
+    transform: translateX(5px);
+}
+
+.card-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 5px 15px;
+    background: linear-gradient(135deg, var(--primary-cyan), var(--accent-green));
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--bg-dark);
+}
+
+/* ==================== QUICK STATS ==================== */
+.quick-stats {
+    position: relative;
+    z-index: 1;
+    padding: 100px 50px;
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.05), rgba(0, 212, 255, 0.02));
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 40px 30px;
+    background: rgba(0, 212, 255, 0.05);
+    border: 1px solid rgba(0, 212, 255, 0.1);
+    border-radius: 15px;
+    transition: var(--transition);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-cyan);
+    background: rgba(0, 212, 255, 0.1);
+}
+
+.stat-card i {
+    font-size: 3rem;
+    color: var(--primary-cyan);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.stat-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--text-white);
+}
+
+.stat-card p {
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 968px) {
+    .hero {
+        padding: 100px 30px 60px;
+    }
+
+    .hero-stats {
+        gap: 40px;
+    }
+
+    .page-nav-section,
+    .quick-stats {
+        padding: 60px 30px;
+    }
+
+    .page-nav-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-stats {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-nav-grid {
+        gap: 20px;
+    }
+
+    .page-nav-card {
+        padding: 30px;
+    }
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | GmanGizmos Web Development</title>
+    <meta name="description" content="Get in touch with GmanGizmos for your software development project. Professional consultation and custom quotes.">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Matrix Rain Canvas -->
+    <canvas id="matrixCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-g">G</span>manGizmos
+            </a>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="tech-stack">
+                <span>JavaScript</span>
+                <span>React</span>
+                <span>GSAP</span>
+                <span>HTML/CSS</span>
+                <span>Firebase</span>
+                <span>Node.js</span>
+                <span>Git</span>
+                <span>Responsive Design</span>
+            </div>
+
+            <h1>Start Your Project Today</h1>
+            <p class="subtitle">Ready to bring your vision to life? Let's discuss your project and create something amazing.</p>
+
+            <form id="contactForm" class="contact-form">
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Your Email"
+                    required
+                >
+
+                <select id="service" name="service" required>
+                    <option value="" disabled selected>Select Service Type</option>
+                    <option value="saas">SaaS Platform Development</option>
+                    <option value="fintech">Fintech & Trading Systems</option>
+                    <option value="security">Cybersecurity Solutions</option>
+                    <option value="enterprise">Enterprise Web Applications</option>
+                    <option value="website">Custom Business Website</option>
+                    <option value="other">Other / Consultation</option>
+                </select>
+
+                <select id="budget" name="budget" required>
+                    <option value="" disabled selected>Budget Range</option>
+                    <option value="1k-3k">$1,000 - $3,000</option>
+                    <option value="3k-5k">$3,000 - $5,000</option>
+                    <option value="5k-10k">$5,000 - $10,000</option>
+                    <option value="10k+">$10,000+</option>
+                    <option value="discuss">Let's Discuss</option>
+                </select>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Tell me about your project..."
+                    rows="6"
+                    required
+                ></textarea>
+
+                <button type="submit" class="btn btn-primary btn-large">
+                    SEND MESSAGE
+                </button>
+            </form>
+
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:divineelectricsllc@gmail.com">divineelectricsllc@gmail.com</a>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+17866725585">786-672-5585</a>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Miami, Florida</span>
+                </div>
+            </div>
+
+            <!-- PayPal Payment Section (shown after form submission) -->
+            <div id="paymentSection" class="payment-section" style="display: none;">
+                <h2>Secure Payment via PayPal</h2>
+                <p>Ready to get started? Make your deposit or full payment securely through PayPal.</p>
+
+                <div id="paypal-button-container"></div>
+
+                <p class="payment-note">
+                    <i class="fas fa-shield-alt"></i>
+                    Secure payment processing powered by PayPal. We never see your card details.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>GmanGizmos</h4>
+                    <p>Professional software development services by military veteran C.A Gordon. Building digital solutions with precision and purpose.</p>
+                    <div class="social-links">
+                        <a href="mailto:divineelectricsllc@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://github.com/GWizard98" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/cristion-gordon-53a111262" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#saas">SaaS Platforms</a></li>
+                        <li><a href="services.html#fintech">Fintech Systems</a></li>
+                        <li><a href="services.html#security">Cybersecurity</a></li>
+                        <li><a href="services.html#enterprise">Enterprise Apps</a></li>
+                        <li><a href="services.html#websites">Business Websites</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li>C.A Gordon</li>
+                        <li><a href="tel:+17866725585">786-672-5585</a></li>
+                        <li><a href="mailto:divineelectricsllc@gmail.com">divineelectricsllc@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GmanGizmos Web Development. All rights reserved.</p>
+                <p>Built with JavaScript, Matrix Rain, and ☕</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/matrix-rain.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+
+    <!-- PayPal SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID&currency=USD"></script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | GmanGizmos Web Development</title>
+    <meta name="description" content="Featured projects by GmanGizmos - AeroSign, AeroVault, Golden Handz, and more. Explore our work.">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="portfolio-body">
+    <!-- Matrix Rain Canvas -->
+    <canvas id="matrixCanvas"></canvas>
+
+    <!-- Minimal Navigation -->
+    <nav class="portfolio-nav">
+        <a href="index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back</span>
+        </a>
+        <a href="index.html" class="nav-logo">
+            <span class="logo-g">G</span>manGizmos
+        </a>
+    </nav>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress">
+        <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <!-- Horizontal Scroll Container -->
+    <div class="portfolio-scroll-wrapper">
+        <div class="portfolio-scroll-content">
+
+            <!-- Intro Card -->
+            <div class="project-slide intro-slide">
+                <div class="slide-content">
+                    <h1 class="portfolio-title">Portfolio</h1>
+                    <p class="portfolio-subtitle">Where Vision Meets Execution</p>
+                    <div class="title-divider"></div>
+                    <p class="intro-text">
+                        From military precision to digital excellence. Each project represents a commitment to quality, innovation, and real-world impact.
+                    </p>
+                    <div class="intro-stats">
+                        <div class="intro-stat">
+                            <h3>3</h3>
+                            <p>Public Projects</p>
+                        </div>
+                        <div class="intro-stat">
+                            <h3>100%</h3>
+                            <p>Deployed</p>
+                        </div>
+                        <div class="intro-stat">
+                            <h3>24/7</h3>
+                            <p>Uptime</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 1: AeroSign -->
+            <div class="project-slide">
+                <div class="project-visual">
+                    <img src="images/aerosign-logo.PNG" alt="AeroSign Logo" class="project-logo">
+                </div>
+                <div class="project-info">
+                    <div class="project-badge live">● LIVE</div>
+                    <h2>AeroSign</h2>
+                    <p class="project-tagline">Digital Signature Platform</p>
+                    <p class="project-desc">
+                        Enterprise QR-based signature capture platform serving healthcare and service industries. Features mobile-optimized signatures, encrypted cloud storage, custom branding, and HIPAA-ready infrastructure.
+                    </p>
+                    <div class="project-stats-grid">
+                        <div class="stat-item">
+                            <i class="fas fa-building"></i>
+                            <span>Multi-Location</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>50+ Signatures Daily</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>HIPAA Ready</span>
+                        </div>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Next.js 15</span>
+                        <span class="tech-badge">TypeScript</span>
+                        <span class="tech-badge">Supabase</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                        <span class="tech-badge">Vercel</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://www.aerosign.tech" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i>
+                            Visit Site
+                        </a>
+                        <button class="btn btn-secondary" onclick="showDetails('aerosign')">
+                            <i class="fas fa-info-circle"></i>
+                            Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Golden Handz -->
+            <div class="project-slide">
+                <div class="project-visual">
+                    <img src="images/goldenhandz-logo.PNG" alt="Golden Handz Logo" class="project-logo">
+                </div>
+                <div class="project-info">
+                    <div class="project-badge live">● LIVE</div>
+                    <h2>Golden Handz Services</h2>
+                    <p class="project-tagline">Service Business Website</p>
+                    <p class="project-desc">
+                        Professional handyman website featuring video galleries, service showcases, and lead capture forms. Built for a local Miami contractor to generate online bookings and establish credibility.
+                    </p>
+                    <div class="project-stats-grid">
+                        <div class="stat-item">
+                            <i class="fas fa-rocket"></i>
+                            <span>Same-Day Deploy</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Sub-2s Load</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span>$0/mo Hosting</span>
+                        </div>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-badge">HTML5</span>
+                        <span class="tech-badge">CSS3</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">Netlify</span>
+                        <span class="tech-badge">FFmpeg</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://prismatic-bombolone-35cca3.netlify.app/" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i>
+                            Visit Site
+                        </a>
+                        <button class="btn btn-secondary" onclick="showDetails('goldenhandz')">
+                            <i class="fas fa-info-circle"></i>
+                            Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: AeroVault -->
+            <div class="project-slide">
+                <div class="project-visual">
+                    <img src="images/aerovault-logo.PNG" alt="AeroVault Logo" class="project-logo">
+                </div>
+                <div class="project-info">
+                    <div class="project-badge production">● PRODUCTION</div>
+                    <h2>AeroVault</h2>
+                    <p class="project-tagline">Backend Infrastructure Platform</p>
+                    <p class="project-desc">
+                        Production backend platform powering AeroSign and future Aero* products. Features microservices architecture with FastAPI, PostgreSQL database, Docker containerization, and API key authentication.
+                    </p>
+                    <div class="progress-section">
+                        <div class="progress-bar-project">
+                            <div class="progress-fill-project" style="width: 70%;"></div>
+                        </div>
+                        <span class="progress-text">Production Ready • 70% Complete</span>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">FastAPI</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                        <span class="tech-badge">Docker</span>
+                        <span class="tech-badge">Alembic</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/GWizard98/AeroVault" target="_blank" class="btn btn-primary">
+                            <i class="fab fa-github"></i>
+                            View on GitHub
+                        </a>
+                        <button class="btn btn-secondary" onclick="showDetails('aerovault')">
+                            <i class="fas fa-info-circle"></i>
+                            Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Projects Card -->
+            <div class="project-slide">
+                <div class="project-visual">
+                    <div class="visual-placeholder">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-badge special">🔒 PRIVATE</div>
+                    <h2>Additional Projects</h2>
+                    <p class="project-tagline">Enterprise & Confidential Work</p>
+                    <p class="project-desc">
+                        Additional enterprise-level projects in fintech, cybersecurity, and SaaS platforms available for review under NDA. Portfolio includes trading systems, security solutions, and proprietary business applications.
+                    </p>
+                    <div class="project-stats-grid">
+                        <div class="stat-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>NDA Protected</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-users"></i>
+                            <span>Enterprise Clients</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-rocket"></i>
+                            <span>Production Ready</span>
+                        </div>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Rust</span>
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">FastAPI</span>
+                        <span class="tech-badge">AI/ML</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="mailto:divineelectricsllc@gmail.com?subject=Private%20Portfolio%20Request" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i>
+                            Request Access
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- End Card -->
+            <div class="project-slide end-slide">
+                <div class="slide-content">
+                    <h2 class="end-title">Let's Build Together</h2>
+                    <p class="end-subtitle">Your Project Could Be Next</p>
+                    <div class="title-divider"></div>
+                    <p class="end-text">
+                        From concept to deployment, I bring military precision and modern technology to every project. Ready to turn your vision into reality?
+                    </p>
+                    <div class="end-actions">
+                        <a href="contact.html" class="btn btn-primary btn-large">
+                            <i class="fas fa-rocket"></i>
+                            Start Your Project
+                        </a>
+                        <a href="services.html" class="btn btn-secondary btn-large">
+                            <i class="fas fa-list"></i>
+                            View Services
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-hint">
+        <span>Scroll to explore</span>
+        <i class="fas fa-arrow-right"></i>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/matrix-rain.js"></script>
+    <script src="js/portfolio.js"></script>
+</body>
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | GmanGizmos Software Development</title>
+    <meta name="description" content="Full-stack software development - SaaS platforms, fintech applications, cybersecurity solutions, and enterprise systems. Custom software built with precision.">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Matrix Rain Canvas -->
+    <canvas id="matrixCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-g">G</span>manGizmos
+            </a>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link active">Services</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Services</h1>
+            <p class="header-subtitle">Full-stack software solutions - from SaaS platforms to enterprise systems, delivering results with military precision</p>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="services-section">
+        <div class="container">
+            
+            <!-- Service 1: SaaS Platform Development -->
+            <div class="service-card featured" id="saas">
+                <div class="service-badge">Most Popular</div>
+                <div class="service-number">01</div>
+                <div class="service-content">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h2>SaaS Platform Development</h2>
+                    <p class="service-description">
+                        Full-featured software-as-a-service applications with subscription management, multi-tenancy, and cloud infrastructure. Like AeroSign and AeroVault.
+                    </p>
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>User authentication & authorization</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Subscription & payment processing</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Multi-tenant architecture</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Cloud infrastructure (AWS/Azure)</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Admin dashboards & analytics</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>API development & documentation</span>
+                        </div>
+                    </div>
+                    <div class="service-footer">
+                        <div class="service-price">
+                            <span class="price-label">Pricing</span>
+                            <span class="price-value">Discuss Price</span>
+                        </div>
+                        <a href="contact.html?service=saas" class="btn btn-primary">
+                            <i class="fas fa-arrow-right"></i>
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2: Fintech & Trading Systems -->
+            <div class="service-card" id="fintech">
+                <div class="service-number">02</div>
+                <div class="service-content">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h2>Fintech & Trading Systems</h2>
+                    <p class="service-description">
+                        Financial technology applications with real-time data, secure transactions, and advanced analytics. Trading platforms, payment systems, and financial dashboards.
+                    </p>
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Real-time market data integration</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Secure payment processing (Stripe/PayPal)</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Trading algorithms & automation</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Advanced data visualization</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Compliance & security standards</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Portfolio tracking & analytics</span>
+                        </div>
+                    </div>
+                    <div class="service-footer">
+                        <div class="service-price">
+                            <span class="price-label">Pricing</span>
+                            <span class="price-value">Discuss Price</span>
+                        </div>
+                        <a href="contact.html?service=fintech" class="btn btn-primary">
+                            <i class="fas fa-arrow-right"></i>
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3: Cybersecurity Solutions -->
+            <div class="service-card" id="security">
+                <div class="service-number">03</div>
+                <div class="service-content">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h2>Cybersecurity Solutions</h2>
+                    <p class="service-description">
+                        Security-focused applications with encryption, threat detection, and compliance monitoring. Protect your business with enterprise-grade security systems.
+                    </p>
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>End-to-end encryption</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Threat detection & monitoring</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Penetration testing & audits</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Compliance management (SOC 2, GDPR)</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Incident response systems</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Security awareness training</span>
+                        </div>
+                    </div>
+                    <div class="service-footer">
+                        <div class="service-price">
+                            <span class="price-label">Pricing</span>
+                            <span class="price-value">Discuss Price</span>
+                        </div>
+                        <a href="contact.html?service=security" class="btn btn-primary">
+                            <i class="fas fa-arrow-right"></i>
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 4: Enterprise Web Applications -->
+            <div class="service-card" id="enterprise">
+                <div class="service-number">04</div>
+                <div class="service-content">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h2>Enterprise Web Applications</h2>
+                    <p class="service-description">
+                        Custom business software with complex workflows, integrations, and scalability. CRM systems, inventory management, booking platforms, and internal tools.
+                    </p>
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Modern tech stack (React, Next.js, FastAPI)</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Custom business logic & workflows</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Third-party API integrations</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Role-based access control</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Real-time notifications (WebSockets)</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Performance optimization & scaling</span>
+                        </div>
+                    </div>
+                    <div class="service-footer">
+                        <div class="service-price">
+                            <span class="price-label">Pricing</span>
+                            <span class="price-value">Discuss Price</span>
+                        </div>
+                        <a href="contact.html?service=enterprise" class="btn btn-primary">
+                            <i class="fas fa-arrow-right"></i>
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 5: Custom Business Websites -->
+            <div class="service-card" id="websites">
+                <div class="service-number">05</div>
+                <div class="service-content">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h2>Custom Business Websites</h2>
+                    <p class="service-description">
+                        Professional websites with modern design and smooth animations. Perfect for businesses, portfolios, and service providers who need a strong online presence.
+                    </p>
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Custom design & branding</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>GSAP animations & effects</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>SEO optimization</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Content management system</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Contact forms & integrations</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Mobile responsive design</span>
+                        </div>
+                    </div>
+                    <div class="service-footer">
+                        <div class="service-price">
+                            <span class="price-label">Pricing</span>
+                            <span class="price-value">Discuss Price</span>
+                        </div>
+                        <a href="contact.html?service=website" class="btn btn-primary">
+                            <i class="fas fa-arrow-right"></i>
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">From concept to deployment in 4 simple steps</p>
+            
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Discovery</h3>
+                    <p>We discuss your goals, target audience, and requirements. I provide honest feedback and a fixed-price quote.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Design & Build</h3>
+                    <p>I create your solution using modern tech. You'll see progress via staging URL with regular updates.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Review & Refine</h3>
+                    <p>Thorough testing across devices. We make revisions based on your feedback until you're satisfied.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Launch & Support</h3>
+                    <p>Deployment, SSL setup, and documentation. 30-day bug fixes included, ongoing support available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Build?</h2>
+            <p>Let's discuss your project and create something amazing together.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-primary btn-large">
+                    <i class="fas fa-rocket"></i>
+                    Start Your Project
+                </a>
+                <a href="portfolio.html" class="btn btn-secondary btn-large">
+                    <i class="fas fa-briefcase"></i>
+                    View Portfolio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>GmanGizmos</h4>
+                    <p>Professional software development services by military veteran C.A Gordon. Building digital solutions with precision and purpose.</p>
+                    <div class="social-links">
+                        <a href="mailto:divineelectricsllc@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://github.com/GWizard98" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/cristion-gordon-53a111262" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#saas">SaaS Platforms</a></li>
+                        <li><a href="#fintech">Fintech Systems</a></li>
+                        <li><a href="#security">Cybersecurity</a></li>
+                        <li><a href="#enterprise">Enterprise Apps</a></li>
+                        <li><a href="#websites">Business Websites</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li>C.A Gordon</li>
+                        <li><a href="tel:+17866725585">786-672-5585</a></li>
+                        <li><a href="mailto:divineelectricsllc@gmail.com">divineelectricsllc@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GmanGizmos Web Development. All rights reserved.</p>
+                <p>Built with JavaScript, Matrix Rain, and ☕</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/matrix-rain.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
