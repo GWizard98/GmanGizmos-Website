@@ -1,0 +1,793 @@
+/* Payment Page Styles */
+
+/* ==================== PAGE HEADER ==================== */
+.page-header {
+    position: relative;
+    z-index: 1;
+    padding: 160px 0 80px;
+    text-align: center;
+}
+
+.page-header h1 {
+    margin-bottom: 20px;
+}
+
+.header-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-gray);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ==================== SECTION TITLES ==================== */
+.section-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    text-align: center;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, var(--primary-cyan), var(--text-white));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-gray);
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+/* ==================== PAYMENT PROCESS SECTION ==================== */
+.payment-process-section {
+    position: relative;
+    z-index: 1;
+    padding: 80px 0;
+}
+
+.payment-process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.process-card {
+    position: relative;
+    background: rgba(10, 14, 39, 0.8);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.process-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-cyan);
+    box-shadow: 0 20px 40px rgba(0, 212, 255, 0.15);
+}
+
+.process-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.2), rgba(0, 212, 255, 0.2));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--primary-cyan);
+}
+
+.process-step-number {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background: var(--primary-cyan);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--bg-dark);
+}
+
+.process-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--text-white);
+}
+
+.process-card p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ==================== SERVICE PAYMENTS SECTION ==================== */
+.service-payments-section {
+    position: relative;
+    z-index: 1;
+    padding: 80px 0;
+    background: rgba(5, 7, 17, 0.5);
+}
+
+.service-payments-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-payment-card {
+    position: relative;
+    background: rgba(10, 14, 39, 0.9);
+    border: 1px solid rgba(0, 212, 255, 0.15);
+    border-radius: 20px;
+    padding: 35px 25px;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.service-payment-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 212, 255, 0.4);
+    box-shadow: 0 15px 40px rgba(0, 212, 255, 0.1);
+}
+
+.service-payment-card.featured {
+    border-color: var(--primary-cyan);
+    background: linear-gradient(180deg, rgba(0, 212, 255, 0.08), rgba(10, 14, 39, 0.95));
+}
+
+.service-payment-card.repair-card {
+    border-color: var(--accent-green);
+    background: linear-gradient(180deg, rgba(0, 255, 136, 0.05), rgba(10, 14, 39, 0.95));
+}
+
+.featured-badge,
+.repair-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-cyan));
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-white);
+    white-space: nowrap;
+}
+
+.repair-badge {
+    background: linear-gradient(135deg, #00995C, var(--accent-green));
+}
+
+.service-payment-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.service-payment-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.2), rgba(0, 212, 255, 0.2));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--primary-cyan);
+    flex-shrink: 0;
+}
+
+.service-payment-icon.repair-icon {
+    background: linear-gradient(135deg, rgba(0, 255, 136, 0.15), rgba(0, 212, 255, 0.15));
+    color: var(--accent-green);
+}
+
+.service-payment-header h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    color: var(--text-white);
+    margin: 0;
+}
+
+.service-payment-desc {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.service-payment-price {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent-green), var(--primary-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+}
+
+.service-paypal-form {
+    margin-bottom: 15px;
+}
+
+.btn-service-pay {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 20px;
+    background: linear-gradient(135deg, #003087, #009cde);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-service-pay:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 156, 222, 0.35);
+}
+
+.btn-service-pay.btn-repair {
+    background: linear-gradient(135deg, #00995C, var(--accent-green));
+}
+
+.btn-service-pay.btn-repair:hover {
+    box-shadow: 0 8px 25px rgba(0, 255, 136, 0.3);
+}
+
+.service-link {
+    display: inline-block;
+    color: var(--primary-cyan);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.service-link:hover {
+    color: var(--text-white);
+}
+
+/* ==================== REPAIR PRICING SECTION ==================== */
+.repair-pricing-section {
+    position: relative;
+    z-index: 1;
+    padding: 80px 0;
+}
+
+.repair-tiers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.repair-tier-card {
+    background: rgba(10, 14, 39, 0.8);
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    border-radius: 20px;
+    padding: 35px 30px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.repair-tier-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-green);
+    box-shadow: 0 15px 40px rgba(0, 255, 136, 0.1);
+}
+
+.repair-tier-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, rgba(0, 255, 136, 0.15), rgba(0, 212, 255, 0.15));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--accent-green);
+}
+
+.repair-tier-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--text-white);
+}
+
+.repair-price-list {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.repair-price-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+    font-size: 0.9rem;
+}
+
+.repair-price-list li:last-child {
+    border-bottom: none;
+}
+
+.repair-price-list li span:first-child {
+    color: var(--text-gray);
+}
+
+.repair-price-list li span:last-child {
+    color: var(--accent-green);
+    font-weight: 600;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.btn-sm {
+    padding: 10px 25px;
+    font-size: 0.85rem;
+}
+
+/* ==================== SERVICE TIERS SECTION ==================== */
+.service-tiers-section {
+    position: relative;
+    z-index: 1;
+    padding: 80px 0;
+    background: rgba(5, 7, 17, 0.5);
+}
+
+.tiers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.tier-card {
+    position: relative;
+    background: rgba(10, 14, 39, 0.9);
+    border: 1px solid rgba(0, 212, 255, 0.15);
+    border-radius: 20px;
+    padding: 40px 25px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.tier-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 212, 255, 0.4);
+}
+
+.tier-card.featured {
+    border-color: var(--primary-cyan);
+    background: linear-gradient(180deg, rgba(0, 212, 255, 0.08), rgba(10, 14, 39, 0.95));
+}
+
+.tier-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-cyan));
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-white);
+}
+
+.tier-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.15), rgba(0, 212, 255, 0.15));
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    color: var(--primary-cyan);
+}
+
+.tier-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--text-white);
+}
+
+.tier-description {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    min-height: 70px;
+}
+
+.tier-price {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent-green), var(--primary-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ==================== PAYMENT SECTION ==================== */
+.payment-section {
+    position: relative;
+    z-index: 1;
+    padding: 80px 0;
+}
+
+.payment-card {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(10, 14, 39, 0.9);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 25px;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.payment-info {
+    padding-right: 30px;
+    border-right: 1px solid rgba(0, 212, 255, 0.15);
+}
+
+.payment-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #003087, #009cde);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.payment-info h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--text-white);
+}
+
+.payment-info > p {
+    color: var(--text-gray);
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+.payment-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.payment-features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-gray);
+    font-size: 0.95rem;
+}
+
+.payment-features li i {
+    color: var(--accent-green);
+    font-size: 1rem;
+}
+
+.payment-action {
+    text-align: center;
+}
+
+.paypal-form {
+    margin-bottom: 20px;
+}
+
+.btn-paypal {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 50px;
+    background: linear-gradient(135deg, #003087, #009cde);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-paypal:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 156, 222, 0.4);
+}
+
+.btn-paypal i {
+    font-size: 1.5rem;
+}
+
+.paypal-note {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    margin-bottom: 30px;
+}
+
+.paypal-direct {
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 212, 255, 0.15);
+}
+
+.paypal-direct p {
+    color: var(--text-gray);
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+/* ==================== PAYMENT INFO SECTION ==================== */
+.payment-info-section {
+    position: relative;
+    z-index: 1;
+    padding: 80px 0;
+}
+
+.payment-info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.info-card {
+    background: rgba(10, 14, 39, 0.8);
+    border: 1px solid rgba(0, 212, 255, 0.15);
+    border-radius: 20px;
+    padding: 30px 25px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.info-card:hover {
+    border-color: rgba(0, 212, 255, 0.4);
+    transform: translateY(-5px);
+}
+
+.info-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.2), rgba(0, 212, 255, 0.2));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--primary-cyan);
+}
+
+.info-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: var(--text-white);
+}
+
+.info-card p {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.compliance-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: rgba(0, 212, 255, 0.08);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 15px;
+    padding: 25px 30px;
+}
+
+.compliance-notice > i {
+    color: var(--primary-cyan);
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.compliance-text {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.compliance-text strong {
+    color: var(--primary-cyan);
+}
+
+/* ==================== CONTACT SECTION ==================== */
+.contact-section {
+    position: relative;
+    z-index: 1;
+    padding: 80px 0;
+    background: rgba(5, 7, 17, 0.5);
+}
+
+.contact-card {
+    max-width: 700px;
+    margin: 0 auto;
+    background: rgba(10, 14, 39, 0.8);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 25px;
+    padding: 50px;
+    text-align: center;
+}
+
+.contact-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 25px;
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.2), rgba(0, 212, 255, 0.2));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--primary-cyan);
+}
+
+.contact-card h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--text-white);
+}
+
+.contact-card > p {
+    color: var(--text-gray);
+    margin-bottom: 30px;
+    line-height: 1.7;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1100px) {
+    .payment-process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tiers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-payments-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .repair-tiers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .payment-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        padding: 140px 0 60px;
+    }
+
+    .payment-process-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .tiers-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .service-payments-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .repair-tiers-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .payment-info-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto 40px;
+    }
+
+    .compliance-notice {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .payment-card {
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+
+    .payment-info {
+        padding-right: 0;
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 212, 255, 0.15);
+        padding-bottom: 30px;
+    }
+
+    .contact-card {
+        padding: 30px 20px;
+    }
+
+    .contact-actions {
+        flex-direction: column;
+    }
+
+    .contact-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-paypal {
+        padding: 15px 30px;
+        font-size: 1rem;
+    }
+
+    .tier-description {
+        min-height: auto;
+    }
+}

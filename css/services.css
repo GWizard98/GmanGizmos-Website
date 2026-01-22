@@ -165,6 +165,17 @@
     gap: 20px;
 }
 
+.service-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-pay {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+}
+
 .service-price {
     display: flex;
     flex-direction: column;
@@ -258,6 +269,81 @@
     line-height: 1.7;
 }
 
+/* ==================== CONSULTATION SECTION ==================== */
+.consultation-section {
+    padding: 80px 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.consultation-card {
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.15), rgba(0, 212, 255, 0.1));
+    border: 2px solid var(--primary-cyan);
+    border-radius: 25px;
+    padding: 50px;
+    transition: var(--transition);
+}
+
+.consultation-card:hover {
+    box-shadow: var(--shadow-glow);
+}
+
+.consultation-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.consultation-icon {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-cyan));
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: var(--text-white);
+    flex-shrink: 0;
+}
+
+.consultation-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.consultation-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--primary-cyan);
+}
+
+.consultation-text p {
+    color: var(--text-gray);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .consultation-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .consultation-icon {
+        margin: 0 auto;
+    }
+
+    .consultation-text {
+        min-width: auto;
+    }
+
+    .consultation-card {
+        padding: 30px 20px;
+    }
+}
+
 /* ==================== CTA SECTION ==================== */
 .cta-section {
     padding: 100px 20px;
@@ -323,7 +409,13 @@
         align-items: flex-start;
     }
 
-    .service-footer .btn {
+    .service-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .service-footer .btn,
+    .service-actions .btn {
         width: 100%;
         justify-content: center;
     }

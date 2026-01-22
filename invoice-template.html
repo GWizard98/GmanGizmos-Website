@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice | GmanGizmos Web Development</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Invoice Template Styles */
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --primary-cyan: #00D4FF;
+            --primary-blue: #0066FF;
+            --accent-green: #00FF88;
+            --bg-dark: #0A0E27;
+            --text-dark: #1a1a2e;
+            --text-gray: #6B7280;
+            --border-color: #e5e7eb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f5f5f5;
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .invoice-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        /* Header */
+        .invoice-header {
+            background: linear-gradient(135deg, var(--bg-dark), #16213e);
+            color: white;
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .company-info {
+            flex: 1;
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .logo-g {
+            color: var(--primary-cyan);
+        }
+
+        .company-details {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+        }
+
+        .company-details a {
+            color: var(--primary-cyan);
+            text-decoration: none;
+        }
+
+        .invoice-title-section {
+            text-align: right;
+        }
+
+        .invoice-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, var(--primary-cyan), white);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .invoice-number {
+            font-size: 1.1rem;
+            color: var(--primary-cyan);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .invoice-date {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+        }
+
+        /* Body */
+        .invoice-body {
+            padding: 40px;
+        }
+
+        /* Client & Project Info */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .info-section h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-gray);
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--primary-cyan);
+            display: inline-block;
+        }
+
+        .info-section p {
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .info-section .placeholder {
+            color: var(--text-gray);
+            font-style: italic;
+        }
+
+        /* Itemized Table */
+        .invoice-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        .invoice-table thead {
+            background: linear-gradient(135deg, var(--bg-dark), #16213e);
+            color: white;
+        }
+
+        .invoice-table th {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 15px 20px;
+            text-align: left;
+        }
+
+        .invoice-table th:last-child {
+            text-align: right;
+        }
+
+        .invoice-table td {
+            padding: 18px 20px;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.95rem;
+        }
+
+        .invoice-table td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        .invoice-table tbody tr:hover {
+            background: #f8fafc;
+        }
+
+        .service-name {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .service-description {
+            color: var(--text-gray);
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+
+        /* Totals */
+        .totals-section {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 40px;
+        }
+
+        .totals-table {
+            width: 320px;
+        }
+
+        .totals-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.95rem;
+        }
+
+        .totals-row.subtotal {
+            font-weight: 500;
+        }
+
+        .totals-row.deposit {
+            color: var(--accent-green);
+        }
+
+        .totals-row.balance {
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-bottom: none;
+            padding-top: 15px;
+            color: var(--text-dark);
+        }
+
+        .totals-row.balance .amount {
+            color: var(--primary-blue);
+        }
+
+        /* Payment Instructions */
+        .payment-instructions {
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.05), rgba(0, 212, 255, 0.05));
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .payment-instructions h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .payment-instructions h3 i {
+            color: var(--primary-cyan);
+        }
+
+        .payment-methods {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .payment-method {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .payment-method i {
+            font-size: 1.5rem;
+            color: #003087;
+        }
+
+        .payment-method span {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+        }
+
+        .payment-method a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .payment-method a:hover {
+            text-decoration: underline;
+        }
+
+        /* Terms */
+        .terms-section {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .terms-section strong {
+            color: var(--text-dark);
+        }
+
+        /* Footer */
+        .invoice-footer {
+            background: #f8fafc;
+            padding: 25px 40px;
+            text-align: center;
+            color: var(--text-gray);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .invoice-footer p {
+            margin-bottom: 5px;
+        }
+
+        .invoice-footer a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        /* Print Button */
+        .print-actions {
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .btn-print {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-cyan));
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn-print:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 102, 255, 0.3);
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .invoice-container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .print-actions {
+                display: none;
+            }
+
+            .invoice-header {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .invoice-table thead {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .payment-instructions {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 10px;
+            }
+
+            .invoice-header {
+                flex-direction: column;
+                gap: 30px;
+                padding: 30px 25px;
+            }
+
+            .invoice-title-section {
+                text-align: left;
+            }
+
+            .invoice-body {
+                padding: 25px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .invoice-table {
+                font-size: 0.85rem;
+            }
+
+            .invoice-table th,
+            .invoice-table td {
+                padding: 12px 15px;
+            }
+
+            .payment-methods {
+                grid-template-columns: 1fr;
+            }
+
+            .totals-table {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="invoice-container">
+        <!-- Header -->
+        <div class="invoice-header">
+            <div class="company-info">
+                <div class="logo">
+                    <span class="logo-g">G</span>manGizmos
+                </div>
+                <div class="company-details">
+                    C.A Gordon<br>
+                    Miami, FL<br>
+                    <a href="tel:+17866725585">786-672-5585</a><br>
+                    <a href="mailto:gordoncristion@gmail.com">gordoncristion@gmail.com</a>
+                </div>
+            </div>
+            <div class="invoice-title-section">
+                <h1 class="invoice-title">INVOICE</h1>
+                <div class="invoice-number">#INV-001</div>
+                <div class="invoice-date">Date: January 18, 2026</div>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="invoice-body">
+            <!-- Client & Project Info -->
+            <div class="info-grid">
+                <div class="info-section">
+                    <h3>Bill To</h3>
+                    <p>
+                        <span class="placeholder">[Client Name]</span><br>
+                        <span class="placeholder">[Client Email]</span><br>
+                        <span class="placeholder">[Client Address]</span><br>
+                        <span class="placeholder">[City, State ZIP]</span>
+                    </p>
+                </div>
+                <div class="info-section">
+                    <h3>Project Details</h3>
+                    <p>
+                        <span class="placeholder">[Project Name/Description]</span><br>
+                        <span class="placeholder">[Additional project details...]</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Itemized Table -->
+            <table class="invoice-table">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="service-name">[Service Name]</div>
+                        </td>
+                        <td>
+                            <div class="service-description">[Description of service provided]</div>
+                        </td>
+                        <td>$0.00</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="service-name">[Additional Service]</div>
+                        </td>
+                        <td>
+                            <div class="service-description">[Description of additional service]</div>
+                        </td>
+                        <td>$0.00</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Totals -->
+            <div class="totals-section">
+                <div class="totals-table">
+                    <div class="totals-row subtotal">
+                        <span>Subtotal</span>
+                        <span>$0.00</span>
+                    </div>
+                    <div class="totals-row deposit">
+                        <span>Deposit Paid (50%)</span>
+                        <span>- $0.00</span>
+                    </div>
+                    <div class="totals-row balance">
+                        <span>Balance Due</span>
+                        <span class="amount">$0.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Instructions -->
+            <div class="payment-instructions">
+                <h3><i class="fab fa-paypal"></i> Payment Instructions</h3>
+                <div class="payment-methods">
+                    <div class="payment-method">
+                        <i class="fas fa-envelope"></i>
+                        <span>PayPal: <a href="mailto:gordoncristion@gmail.com">gordoncristion@gmail.com</a></span>
+                    </div>
+                    <div class="payment-method">
+                        <i class="fas fa-link"></i>
+                        <span>PayPal.me: <a href="https://paypal.me/gordoncristion" target="_blank">paypal.me/gordoncristion</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Terms -->
+            <div class="terms-section">
+                <strong>Terms:</strong> Payment due within 14 days of invoice date. Please include invoice number in payment notes for reference.
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="invoice-footer">
+            <p>Thank you for your business!</p>
+            <p><a href="https://gmangizmos.com">www.gmangizmos.com</a></p>
+        </div>
+    </div>
+
+    <!-- Print Button -->
+    <div class="print-actions">
+        <button class="btn-print" onclick="window.print()">
+            <i class="fas fa-print"></i>
+            Print Invoice
+        </button>
+    </div>
+</body>
+</html>

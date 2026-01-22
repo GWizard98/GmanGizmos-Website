@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Portal | GmanGizmos Web Development</title>
+    <meta name="description" content="Secure payment portal for GmanGizmos web development and electronic repair services. Pay for your project easily via PayPal.">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/payment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Matrix Rain Canvas -->
+    <canvas id="matrixCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-g">G</span>manGizmos
+            </a>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="payment.html" class="nav-link active">Payment</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Payment Portal</h1>
+            <p class="header-subtitle">Secure, simple payments for web development and repair services</p>
+        </div>
+    </section>
+
+    <!-- Payment Process Section -->
+    <section class="payment-process-section">
+        <div class="container">
+            <h2 class="section-title">How Payment Works</h2>
+            <p class="section-subtitle">A simple, transparent payment process</p>
+
+            <div class="payment-process-grid">
+                <div class="process-card">
+                    <div class="process-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="process-step-number">1</div>
+                    <h3>Project Agreement</h3>
+                    <p>We discuss your project requirements and agree on scope, timeline, and total cost.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <div class="process-step-number">2</div>
+                    <h3>50% Deposit</h3>
+                    <p>Pay 50% upfront to begin work. This secures your project slot and covers initial development.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="process-step-number">3</div>
+                    <h3>Development</h3>
+                    <p>I build your project with regular updates and a staging site for your review.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="process-step-number">4</div>
+                    <h3>Final Payment</h3>
+                    <p>Pay the remaining 50% upon project completion and approval before final deployment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service-Specific Payments Section -->
+    <section class="service-payments-section">
+        <div class="container">
+            <h2 class="section-title">Pay for Services</h2>
+            <p class="section-subtitle">Select your service type for quick payment</p>
+
+            <div class="service-payments-grid">
+                <!-- SaaS Platform Development -->
+                <div class="service-payment-card" id="pay-saas">
+                    <div class="service-payment-header">
+                        <div class="service-payment-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>SaaS Platform Development</h3>
+                    </div>
+                    <p class="service-payment-desc">Multi-tenant applications, subscription billing, and cloud infrastructure.</p>
+                    <div class="service-payment-price">$5,000 - $25,000+</div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="service-paypal-form">
+                        <input type="hidden" name="cmd" value="_xclick">
+                        <input type="hidden" name="business" value="gordoncristion@gmail.com">
+                        <input type="hidden" name="item_name" value="GmanGizmos - SaaS Platform Development">
+                        <input type="hidden" name="currency_code" value="USD">
+                        <input type="hidden" name="no_shipping" value="1">
+                        <button type="submit" class="btn btn-service-pay">
+                            <i class="fab fa-paypal"></i>
+                            Pay for SaaS Project
+                        </button>
+                    </form>
+                    <a href="services.html#saas" class="service-link">View Service Details →</a>
+                </div>
+
+                <!-- Fintech & Trading System Development -->
+                <div class="service-payment-card" id="pay-fintech">
+                    <div class="service-payment-header">
+                        <div class="service-payment-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Fintech Development</h3>
+                    </div>
+                    <p class="service-payment-desc">Trading dashboards, payment integrations, and financial analytics tools.</p>
+                    <div class="service-payment-price">$3,000 - $15,000+</div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="service-paypal-form">
+                        <input type="hidden" name="cmd" value="_xclick">
+                        <input type="hidden" name="business" value="gordoncristion@gmail.com">
+                        <input type="hidden" name="item_name" value="GmanGizmos - Fintech Development">
+                        <input type="hidden" name="currency_code" value="USD">
+                        <input type="hidden" name="no_shipping" value="1">
+                        <button type="submit" class="btn btn-service-pay">
+                            <i class="fab fa-paypal"></i>
+                            Pay for Fintech Project
+                        </button>
+                    </form>
+                    <a href="services.html#fintech" class="service-link">View Service Details →</a>
+                </div>
+
+                <!-- Cybersecurity Solutions -->
+                <div class="service-payment-card" id="pay-security">
+                    <div class="service-payment-header">
+                        <div class="service-payment-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Cybersecurity Solutions</h3>
+                    </div>
+                    <p class="service-payment-desc">Security audits, threat detection, and compliance systems.</p>
+                    <div class="service-payment-price">$2,000 - $10,000+</div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="service-paypal-form">
+                        <input type="hidden" name="cmd" value="_xclick">
+                        <input type="hidden" name="business" value="gordoncristion@gmail.com">
+                        <input type="hidden" name="item_name" value="GmanGizmos - Cybersecurity Solutions">
+                        <input type="hidden" name="currency_code" value="USD">
+                        <input type="hidden" name="no_shipping" value="1">
+                        <button type="submit" class="btn btn-service-pay">
+                            <i class="fab fa-paypal"></i>
+                            Pay for Security Project
+                        </button>
+                    </form>
+                    <a href="services.html#security" class="service-link">View Service Details →</a>
+                </div>
+
+                <!-- Enterprise Web Applications -->
+                <div class="service-payment-card" id="pay-enterprise">
+                    <div class="service-payment-header">
+                        <div class="service-payment-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Enterprise Web Apps</h3>
+                    </div>
+                    <p class="service-payment-desc">CRM systems, inventory management, and custom business software.</p>
+                    <div class="service-payment-price">$2,500 - $10,000+</div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="service-paypal-form">
+                        <input type="hidden" name="cmd" value="_xclick">
+                        <input type="hidden" name="business" value="gordoncristion@gmail.com">
+                        <input type="hidden" name="item_name" value="GmanGizmos - Enterprise Web Application">
+                        <input type="hidden" name="currency_code" value="USD">
+                        <input type="hidden" name="no_shipping" value="1">
+                        <button type="submit" class="btn btn-service-pay">
+                            <i class="fab fa-paypal"></i>
+                            Pay for Enterprise App
+                        </button>
+                    </form>
+                    <a href="services.html#enterprise" class="service-link">View Service Details →</a>
+                </div>
+
+                <!-- Custom Business Websites -->
+                <div class="service-payment-card featured" id="pay-website">
+                    <div class="featured-badge">Most Popular</div>
+                    <div class="service-payment-header">
+                        <div class="service-payment-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Business Websites</h3>
+                    </div>
+                    <p class="service-payment-desc">Landing pages, multi-page sites, and complete business web presence.</p>
+                    <div class="service-payment-price">$300 - $2,500</div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="service-paypal-form">
+                        <input type="hidden" name="cmd" value="_xclick">
+                        <input type="hidden" name="business" value="gordoncristion@gmail.com">
+                        <input type="hidden" name="item_name" value="GmanGizmos - Business Website Development">
+                        <input type="hidden" name="currency_code" value="USD">
+                        <input type="hidden" name="no_shipping" value="1">
+                        <button type="submit" class="btn btn-service-pay">
+                            <i class="fab fa-paypal"></i>
+                            Pay for Website
+                        </button>
+                    </form>
+                    <a href="services.html#websites" class="service-link">View Service Details →</a>
+                </div>
+
+                <!-- Electronic Repairs -->
+                <div class="service-payment-card repair-card" id="pay-repairs">
+                    <div class="repair-badge">Repair Services</div>
+                    <div class="service-payment-header">
+                        <div class="service-payment-icon repair-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Electronic Repairs</h3>
+                    </div>
+                    <p class="service-payment-desc">Smartphone, tablet, and laptop repairs. Screen replacements, batteries, and more.</p>
+                    <div class="service-payment-price">Starting at $49</div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="service-paypal-form">
+                        <input type="hidden" name="cmd" value="_xclick">
+                        <input type="hidden" name="business" value="gordoncristion@gmail.com">
+                        <input type="hidden" name="item_name" value="GmanGizmos - Electronic Repair Services">
+                        <input type="hidden" name="currency_code" value="USD">
+                        <input type="hidden" name="no_shipping" value="1">
+                        <button type="submit" class="btn btn-service-pay btn-repair">
+                            <i class="fab fa-paypal"></i>
+                            Pay for Repair
+                        </button>
+                    </form>
+                    <a href="repairs.html" class="service-link">View Repair Options →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Tiers Section -->
+    <section class="service-tiers-section">
+        <div class="container">
+            <h2 class="section-title">Web Development Pricing Guide</h2>
+            <p class="section-subtitle">Investment ranges based on project complexity</p>
+
+            <div class="tiers-grid">
+                <div class="tier-card">
+                    <div class="tier-icon">
+                        <i class="fas fa-file"></i>
+                    </div>
+                    <h3>Landing Pages</h3>
+                    <p class="tier-description">Single-page websites with responsive design, animations, and contact forms.</p>
+                    <div class="tier-price">$300 - $800</div>
+                </div>
+                <div class="tier-card featured">
+                    <div class="tier-badge">Popular</div>
+                    <div class="tier-icon">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <h3>Multi-Page Sites</h3>
+                    <p class="tier-description">Complete business websites with multiple pages, galleries, and advanced features.</p>
+                    <div class="tier-price">$800 - $2,500</div>
+                </div>
+                <div class="tier-card">
+                    <div class="tier-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Web Applications</h3>
+                    <p class="tier-description">Full-stack applications with user auth, databases, and custom functionality.</p>
+                    <div class="tier-price">$2,500 - $10,000+</div>
+                </div>
+                <div class="tier-card">
+                    <div class="tier-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Custom Projects</h3>
+                    <p class="tier-description">Enterprise solutions, SaaS platforms, and specialized applications.</p>
+                    <div class="tier-price">Contact for Quote</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Repair Pricing Section -->
+    <section class="repair-pricing-section">
+        <div class="container">
+            <h2 class="section-title">Electronic Repair Pricing</h2>
+            <p class="section-subtitle">Transparent pricing for device repairs</p>
+
+            <div class="repair-tiers-grid">
+                <div class="repair-tier-card">
+                    <div class="repair-tier-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Smartphone Repairs</h3>
+                    <ul class="repair-price-list">
+                        <li><span>Screen Replacement</span><span>From $79</span></li>
+                        <li><span>Battery Replacement</span><span>From $49</span></li>
+                        <li><span>Charging Port</span><span>From $59</span></li>
+                        <li><span>Camera Repair</span><span>From $69</span></li>
+                    </ul>
+                    <a href="repairs.html" class="btn btn-secondary btn-sm">View All Repairs</a>
+                </div>
+                <div class="repair-tier-card">
+                    <div class="repair-tier-icon">
+                        <i class="fas fa-tablet-alt"></i>
+                    </div>
+                    <h3>Tablet Repairs</h3>
+                    <ul class="repair-price-list">
+                        <li><span>Screen/Digitizer</span><span>From $99</span></li>
+                        <li><span>Battery Replacement</span><span>From $69</span></li>
+                        <li><span>Charging Port</span><span>From $79</span></li>
+                        <li><span>Home Button</span><span>From $59</span></li>
+                    </ul>
+                    <a href="repairs.html" class="btn btn-secondary btn-sm">View All Repairs</a>
+                </div>
+                <div class="repair-tier-card">
+                    <div class="repair-tier-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Laptop Repairs</h3>
+                    <ul class="repair-price-list">
+                        <li><span>Screen Replacement</span><span>From $149</span></li>
+                        <li><span>Battery Replacement</span><span>From $99</span></li>
+                        <li><span>Keyboard Replacement</span><span>From $119</span></li>
+                        <li><span>SSD/RAM Upgrade</span><span>From $79</span></li>
+                    </ul>
+                    <a href="repairs.html" class="btn btn-secondary btn-sm">View All Repairs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- General Payment Section -->
+    <section class="payment-section">
+        <div class="container">
+            <h2 class="section-title">General Payment</h2>
+            <p class="section-subtitle">For custom amounts, deposits, and final payments</p>
+
+            <div class="payment-card">
+                <div class="payment-info">
+                    <div class="payment-icon">
+                        <i class="fab fa-paypal"></i>
+                    </div>
+                    <h3>Pay with PayPal</h3>
+                    <p>Click the button below to make a secure payment. You can enter a custom amount for your deposit or final payment.</p>
+                    <ul class="payment-features">
+                        <li><i class="fas fa-shield-alt"></i> Secure & encrypted</li>
+                        <li><i class="fas fa-credit-card"></i> Pay with card or PayPal balance</li>
+                        <li><i class="fas fa-receipt"></i> Instant payment confirmation</li>
+                        <li><i class="fas fa-lock"></i> Buyer protection included</li>
+                    </ul>
+                </div>
+                <div class="payment-action">
+                    <!-- PayPal Hosted Button -->
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="paypal-form">
+                        <input type="hidden" name="cmd" value="_xclick">
+                        <input type="hidden" name="business" value="gordoncristion@gmail.com">
+                        <input type="hidden" name="item_name" value="GmanGizmos Web Development Services">
+                        <input type="hidden" name="currency_code" value="USD">
+                        <input type="hidden" name="no_shipping" value="1">
+                        <button type="submit" class="btn btn-paypal">
+                            <i class="fab fa-paypal"></i>
+                            Pay with PayPal
+                        </button>
+                    </form>
+                    <p class="paypal-note">You'll be redirected to PayPal to enter your payment amount securely.</p>
+
+                    <div class="paypal-direct">
+                        <p>Or pay directly via:</p>
+                        <a href="https://paypal.me/gordoncristion" target="_blank" class="btn btn-secondary">
+                            <i class="fas fa-external-link-alt"></i>
+                            PayPal.me/gordoncristion
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Info & Limits Section -->
+    <section class="payment-info-section">
+        <div class="container">
+            <h2 class="section-title">Payment Information</h2>
+            <p class="section-subtitle">Secure payments processed through PayPal</p>
+
+            <div class="payment-info-grid">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure Transactions</h3>
+                    <p>All payments are processed securely through PayPal with buyer protection. Your financial information is never shared with me directly.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Transaction Limits</h3>
+                    <p>Single transactions up to $10,000 USD. For larger projects, payments can be split into multiple installments (e.g., 50% deposit + 50% final).</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <h3>Invoices Available</h3>
+                    <p>Need a formal invoice for your records? Contact me and I'll send a detailed PayPal invoice with itemized services and payment terms.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Payment Methods</h3>
+                    <p>Pay with PayPal balance, linked bank account, or credit/debit card (Visa, Mastercard, Amex, Discover) through PayPal's secure checkout.</p>
+                </div>
+            </div>
+
+            <div class="compliance-notice">
+                <i class="fas fa-info-circle"></i>
+                <div class="compliance-text">
+                    <strong>Payment Policy:</strong> All payments are for freelance software development and electronic repair services.
+                    A 50% deposit is required to begin work on development projects. Final payment is due upon project completion and client approval.
+                    Repair services are paid upon completion. Refund policy available upon request.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-question-circle"></i>
+                </div>
+                <h2>Questions About Payment?</h2>
+                <p>Need an invoice, have billing questions, or want to discuss payment plans? Get in touch and I'll help you out.</p>
+                <div class="contact-actions">
+                    <a href="mailto:gordoncristion@gmail.com" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i>
+                        Email Me
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary">
+                        <i class="fas fa-comments"></i>
+                        Contact Form
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>GmanGizmos</h4>
+                    <p>Professional software development and electronic repair services by military veteran C.A Gordon. Building digital solutions with precision and purpose.</p>
+                    <div class="social-links">
+                        <a href="mailto:gordoncristion@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://github.com/GWizard98" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/cristion-gordon-53a111262" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="payment.html">Payment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#saas">SaaS Platforms</a></li>
+                        <li><a href="services.html#fintech">Fintech Development</a></li>
+                        <li><a href="services.html#security">Cybersecurity</a></li>
+                        <li><a href="services.html#enterprise">Enterprise Apps</a></li>
+                        <li><a href="services.html#websites">Business Websites</a></li>
+                        <li><a href="repairs.html">Electronic Repairs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li>C.A Gordon</li>
+                        <li><a href="tel:+17866725585">786-672-5585</a></li>
+                        <li><a href="mailto:gordoncristion@gmail.com">gordoncristion@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GmanGizmos Web Development. All rights reserved.</p>
+                <p>Built with JavaScript, Matrix Rain, and ☕</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/matrix-rain.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
