@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GmanGizmos - Electronic Repairs Flyer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #D4A84B;
+            --gold-light: #F5D68A;
+            --gold-dark: #B8932F;
+            --black: #0A0A0A;
+            --white: #FAFAFA;
+        }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background: #1a1a1a;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .flyer {
+            width: 5.5in;
+            height: 8.5in;
+            background: linear-gradient(160deg, #0D0D0D 0%, #080808 100%);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 60px rgba(212, 168, 75, 0.2);
+        }
+
+        /* Glowing border effect */
+        .flyer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 2px solid var(--gold);
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        /* Matrix-style background */
+        .matrix-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(212, 168, 75, 0.02) 2px,
+                    rgba(212, 168, 75, 0.02) 4px
+                );
+        }
+
+        /* Diagonal accent */
+        .diagonal-accent {
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 200%;
+            background: linear-gradient(135deg, transparent 48%, rgba(212, 168, 75, 0.05) 49%, rgba(212, 168, 75, 0.05) 51%, transparent 52%);
+            pointer-events: none;
+        }
+
+        .content {
+            position: relative;
+            z-index: 10;
+            padding: 40px 35px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .logo-svg {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 10px;
+        }
+
+        .brand-name {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 36px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 2px;
+        }
+
+        .sub-brand {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 13px;
+            color: var(--gold);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            opacity: 0.8;
+        }
+
+        /* Main Headline */
+        .main-headline {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .headline-text {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.2;
+        }
+
+        .headline-text span {
+            display: block;
+            color: var(--gold);
+        }
+
+        /* Price Banner */
+        .price-banner {
+            background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-dark));
+            padding: 15px 20px;
+            margin: 20px -35px;
+            text-align: center;
+        }
+
+        .price-text {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 14px;
+            color: var(--black);
+            font-weight: 600;
+        }
+
+        .price-amount {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 42px;
+            color: var(--black);
+            font-weight: 900;
+        }
+
+        .price-amount sup {
+            font-size: 20px;
+            vertical-align: super;
+        }
+
+        /* Services List */
+        .services-section {
+            flex: 1;
+            margin: 25px 0;
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 14px;
+            color: var(--gold);
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .service-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 12px;
+            background: rgba(212, 168, 75, 0.05);
+            border-left: 2px solid var(--gold);
+        }
+
+        .service-icon {
+            font-size: 18px;
+        }
+
+        .service-text {
+            font-size: 12px;
+            color: var(--white);
+            font-weight: 500;
+        }
+
+        /* Software Section */
+        .software-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid rgba(212, 168, 75, 0.3);
+            border-radius: 6px;
+        }
+
+        .software-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 12px;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .software-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .software-tag {
+            font-size: 10px;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 4px 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 3px;
+        }
+
+        /* Footer */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(212, 168, 75, 0.2);
+        }
+
+        .contact-block {
+            flex: 1;
+        }
+
+        .contact-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 10px;
+            color: var(--gold);
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .contact-line {
+            font-size: 13px;
+            color: var(--white);
+            margin-bottom: 4px;
+        }
+
+        .contact-line span {
+            color: var(--gold);
+            margin-right: 6px;
+        }
+
+        .veteran-tag {
+            display: inline-block;
+            font-size: 9px;
+            color: var(--gold);
+            padding: 5px 10px;
+            border: 1px solid rgba(212, 168, 75, 0.5);
+            margin-top: 8px;
+            letter-spacing: 1px;
+        }
+
+        /* QR Section */
+        .qr-block {
+            text-align: center;
+        }
+
+        .qr-wrapper {
+            width: 90px;
+            height: 90px;
+            background: var(--white);
+            padding: 5px;
+            border-radius: 6px;
+        }
+
+        .qr-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mini-logo {
+            width: 60px;
+            height: 60px;
+        }
+
+        .qr-url {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 8px;
+            color: var(--gold);
+            margin-top: 5px;
+            letter-spacing: 1px;
+        }
+
+        /* Free Diagnostic Badge */
+        .free-badge {
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background: var(--gold);
+            color: var(--black);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 8px 40px;
+            transform: rotate(45deg);
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .flyer { box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="flyer">
+        <div class="matrix-bg"></div>
+        <div class="diagonal-accent"></div>
+        <div class="free-badge">FREE DIAG</div>
+
+        <div class="content">
+            <!-- Header -->
+            <div class="header">
+                <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#F5D68A"/>
+                            <stop offset="50%" style="stop-color:#D4A84B"/>
+                            <stop offset="100%" style="stop-color:#B8932F"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M20 35 L20 85 L80 85 L80 35 L20 35" stroke="url(#goldGrad)" stroke-width="3" fill="none"/>
+                    <path d="M35 35 L35 25 Q50 10 65 25 L65 35" stroke="url(#goldGrad)" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    <circle cx="35" cy="35" r="3" fill="url(#goldGrad)"/>
+                    <circle cx="65" cy="35" r="3" fill="url(#goldGrad)"/>
+                    <path d="M35 50 L35 70" stroke="url(#goldGrad)" stroke-width="2"/>
+                    <circle cx="35" cy="50" r="3" fill="url(#goldGrad)"/>
+                    <path d="M50 45 L50 65" stroke="url(#goldGrad)" stroke-width="2"/>
+                    <circle cx="50" cy="65" r="3" fill="url(#goldGrad)"/>
+                    <path d="M65 55 L65 75" stroke="url(#goldGrad)" stroke-width="2"/>
+                    <circle cx="65" cy="55" r="3" fill="url(#goldGrad)"/>
+                    <path d="M35 60 L50 60" stroke="url(#goldGrad)" stroke-width="2"/>
+                    <path d="M50 55 L65 55" stroke="url(#goldGrad)" stroke-width="2"/>
+                </svg>
+                <div class="brand-name">GmanGizmos</div>
+                <div class="sub-brand">Tech Solutions</div>
+            </div>
+
+            <!-- Main Headline -->
+            <div class="main-headline">
+                <div class="headline-text">
+                    ELECTRONIC
+                    <span>REPAIRS</span>
+                </div>
+            </div>
+
+            <!-- Price Banner -->
+            <div class="price-banner">
+                <div class="price-text">STARTING AT ONLY</div>
+                <div class="price-amount"><sup>$</sup>49</div>
+            </div>
+
+            <!-- Services -->
+            <div class="services-section">
+                <div class="section-title">⚡ Repair Services</div>
+                <div class="service-list">
+                    <div class="service-item">
+                        <span class="service-icon">📱</span>
+                        <span class="service-text">iPhone Repairs</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-icon">🤖</span>
+                        <span class="service-text">Android Repairs</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-icon">📲</span>
+                        <span class="service-text">Screen Replacement</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-icon">🔋</span>
+                        <span class="service-text">Battery Swap</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-icon">💻</span>
+                        <span class="service-text">Laptop Repairs</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-icon">📊</span>
+                        <span class="service-text">Data Recovery</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Software Section -->
+            <div class="software-section">
+                <div class="software-title">💻 ALSO OFFERING SOFTWARE DEVELOPMENT</div>
+                <div class="software-items">
+                    <span class="software-tag">SaaS Platforms</span>
+                    <span class="software-tag">Web Apps</span>
+                    <span class="software-tag">Fintech</span>
+                    <span class="software-tag">Cybersecurity</span>
+                    <span class="software-tag">Custom Websites</span>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <div class="contact-block">
+                    <div class="contact-title">CONTACT</div>
+                    <div class="contact-line"><span>📞</span>786-672-5585</div>
+                    <div class="contact-line"><span>✉️</span>divineelectricsllc@gmail.com</div>
+                    <div class="veteran-tag">🎖️ VETERAN OWNED</div>
+                </div>
+                <div class="qr-block">
+                    <div class="qr-wrapper">
+                        <div class="qr-placeholder">
+                            <svg class="mini-logo" viewBox="0 0 100 100" fill="none">
+                                <rect x="5" y="5" width="90" height="90" fill="#0A0A0A" rx="8"/>
+                                <path d="M25 40 L25 75 L75 75 L75 40 L25 40" stroke="#D4A84B" stroke-width="3" fill="none"/>
+                                <path d="M38 40 L38 32 Q50 20 62 32 L62 40" stroke="#D4A84B" stroke-width="3" fill="none"/>
+                                <circle cx="38" cy="40" r="2.5" fill="#D4A84B"/>
+                                <circle cx="62" cy="40" r="2.5" fill="#D4A84B"/>
+                                <path d="M38 50 L38 65" stroke="#D4A84B" stroke-width="2"/>
+                                <circle cx="38" cy="50" r="2.5" fill="#D4A84B"/>
+                                <path d="M50 47 L50 62" stroke="#D4A84B" stroke-width="2"/>
+                                <circle cx="50" cy="62" r="2.5" fill="#D4A84B"/>
+                                <path d="M62 52 L62 67" stroke="#D4A84B" stroke-width="2"/>
+                                <circle cx="62" cy="52" r="2.5" fill="#D4A84B"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="qr-url">gmangizmos.site</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

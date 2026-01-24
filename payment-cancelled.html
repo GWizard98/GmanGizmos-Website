@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Cancelled | GmanGizmos</title>
+    <meta name="description" content="Your payment was cancelled. Return to complete your purchase or contact us for assistance.">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .cancelled-section {
+            min-height: calc(100vh - 200px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 150px 20px 100px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .cancelled-card {
+            max-width: 550px;
+            background: rgba(10, 14, 39, 0.9);
+            border: 2px solid rgba(255, 107, 107, 0.5);
+            border-radius: 30px;
+            padding: 60px 50px;
+            text-align: center;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .cancelled-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 30px;
+            background: rgba(255, 107, 107, 0.2);
+            border: 2px solid rgba(255, 107, 107, 0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #FF6B6B;
+        }
+
+        .cancelled-card h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #FF6B6B;
+        }
+
+        .cancelled-card .description {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+        .cancelled-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .help-note {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(0, 212, 255, 0.15);
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        .help-note a {
+            color: var(--primary-cyan);
+            text-decoration: none;
+        }
+
+        .help-note a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .cancelled-card {
+                padding: 40px 25px;
+            }
+
+            .cancelled-actions {
+                flex-direction: column;
+            }
+
+            .cancelled-actions .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Matrix Rain Canvas -->
+    <canvas id="matrixCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-g">G</span>manGizmos
+            </a>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="payment.html" class="nav-link">Payment</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Cancelled Section -->
+    <section class="cancelled-section">
+        <div class="cancelled-card">
+            <div class="cancelled-icon">
+                <i class="fas fa-times"></i>
+            </div>
+            <h1>Payment Cancelled</h1>
+            <p class="description">
+                Your payment was not completed. No charges have been made to your account. If you experienced any issues or have questions, please don't hesitate to reach out.
+            </p>
+
+            <div class="cancelled-actions">
+                <a href="payment.html" class="btn btn-primary">
+                    <i class="fas fa-redo"></i>
+                    Try Again
+                </a>
+                <a href="contact.html" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i>
+                    Contact Support
+                </a>
+            </div>
+
+            <div class="help-note">
+                <p>Need help? Email <a href="mailto:gordoncristion@gmail.com">gordoncristion@gmail.com</a> or call <a href="tel:+17866725585">786-672-5585</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+                <p>&copy; 2025 GmanGizmos Web Development. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/matrix-rain.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
